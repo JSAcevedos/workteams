@@ -39,7 +39,10 @@ class linkedList:
         else:
             current_node = self.head
             while current_node is not None:
-                print(current_node.data, end=" ")
+                if current_node.next is None:
+                    print(current_node.data, end="")
+                else:
+                    print(current_node.data, end=" ")
                 current_node = current_node.next
 	
 
@@ -50,11 +53,17 @@ workTeams = linkedList()
 
 for i in range(int(length/2) + 1):
     j = length - i
-    students.pushback(list[i])
-    students.pushback(list[j])
+    if (length+1)%2 == 0:
+        students.pushback(list[i])
+        students.pushback(list[j])
+    elif i < int(length/2):
+        students.pushback(list[i])
+        students.pushback(list[j])
+    else:
+        students.pushback(list[i])
 
 students.print()
 
 
 
-#Avila Bermudez Cardenas Ramos Rodriguez Valencia
+#Avila Bermudez Cardenas Ramos Rodriguez Valencia Perez
