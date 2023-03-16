@@ -44,14 +44,17 @@ class linkedList:
 	
 
 list = input().split()
+length = len(list) - 1
 students = linkedList()
 workTeams = linkedList()
 
-for i in range(len(list)):
+for i in range(int(length/2) + 1):
+    j = length - i
     students.pushback(list[i])
-
-
+    students.pushback(list[j])
 
 students.print()
+
+
 
 #Avila Bermudez Cardenas Ramos Rodriguez Valencia
